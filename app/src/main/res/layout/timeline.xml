@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagePengirim"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        tools:src="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/namaPengirim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@+id/imagePengirim"
+        android:fontFamily="@font/roboto_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Nama Pengirim" />
+
+    <TextView
+        android:id="@+id/namaPengumuman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namaPengirim"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@+id/imagePengirim"
+        android:fontFamily="@font/roboto_black"
+        android:textSize="16sp"
+        tools:text="Nama Pengumuman" />
+
+    <TextView
+        android:id="@+id/deskPengumuman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagePengirim"
+        android:layout_marginTop="15dp"
+        android:text="Deskripsi Pengumuman" />
+
+</RelativeLayout>
