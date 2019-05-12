@@ -18,6 +18,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".About"/>
         <activity android:name=".ContactUs"/>
+        <activity android:name=".Report"/>
         <activity android:name=".CreateClassActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailAssigment" />
