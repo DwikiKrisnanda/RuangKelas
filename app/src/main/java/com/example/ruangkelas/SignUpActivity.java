@@ -42,6 +42,7 @@ public class SignUpActivity extends Activity {
 
     public void addUserToList (User user){
         listUser.add(user);
+
     }
 
     boolean isEmail(EditText text) {

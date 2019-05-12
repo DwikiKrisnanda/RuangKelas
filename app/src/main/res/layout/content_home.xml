@@ -8,5 +8,4 @@
     tools:context=".HomeActivity"
     tools:layout_editor_absoluteY="56dp"
     tools:showIn="@layout/app_bar_home">
-
 </android.support.constraint.ConstraintLayout>

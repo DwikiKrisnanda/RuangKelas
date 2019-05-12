@@ -26,32 +26,42 @@
 
 
     <EditText
+        android:id="@+id/newAnnounce"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:id="@+id/inputTugas"
         android:layout_below="@+id/tugas"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="82dp"
         android:layout_marginRight="20dp"
-        android:hint="Add new announce..."/>
+        android:hint="Add new announce..." />
+
+    <EditText
+        android:id="@+id/newTitleAnounce"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tugas"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Add new title announce..." />
 
     <Button
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tugas"
-        android:layout_alignTop="@+id/inputTugas"
-        android:layout_alignBottom="@+id/inputTugas"
+        android:layout_alignTop="@+id/newAnnounce"
+        android:layout_alignBottom="@+id/newAnnounce"
         android:layout_marginTop="0dp"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/inputTugas"
+        android:layout_toRightOf="@+id/newAnnounce"
         android:text="Add" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_pengumuman"
         android:layout_width="match_parent"
         android:layout_height="387dp"
-        android:layout_below="@+id/inputTugas"
+        android:layout_below="@+id/newAnnounce"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp" />
