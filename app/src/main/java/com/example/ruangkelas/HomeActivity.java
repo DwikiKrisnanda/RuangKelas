@@ -28,8 +28,8 @@ public class HomeActivity extends AppCompatActivity
         addClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent2 = new Intent(HomeActivity.this, CreateClassActivity.class);
+                startActivity(intent2);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -85,13 +85,14 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_classes) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_help) {
 
         } else if (id == R.id.nav_about) {
 
         } else if (id == R.id.nav_logout) {
-
+            Intent intentLogout = new Intent(HomeActivity.this, LoginActivity.class);
+            startActivity(intentLogout);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

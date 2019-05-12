@@ -2,6 +2,7 @@ package com.example.ruangkelas;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -10,12 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SignUpActivity extends Activity {
+    List<User> listUser;
     EditText UsernameRegis;
     EditText EmailRegis;
     EditText PassRegis;
     EditText ConfPassRegis;
     Button register;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_layout);
@@ -25,12 +31,17 @@ public class SignUpActivity extends Activity {
         ConfPassRegis = findViewById(R.id.RegistConfPass);
         register = findViewById(R.id.RegistButton);
 
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkDataEntered();
             }
         });
+    }
+
+    public void addUserToList (User user){
+        listUser.add(user);
     }
 
     boolean isEmail(EditText text) {

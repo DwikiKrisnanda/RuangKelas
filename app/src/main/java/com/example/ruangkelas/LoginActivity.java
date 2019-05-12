@@ -8,9 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.List;
+
 
 public class LoginActivity extends Activity {
 
+    List<User> listUser;
     private Button login;
     private EditText username, password;
     private int counter = 5;
