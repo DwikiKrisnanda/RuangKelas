@@ -81,10 +81,15 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_classes) {
-            Intent intetClasses = new Intent(HomeActivity.this, HomeActivity.class);
-            startActivity(intetClasses);
-        } else if (id == R.id.nav_help) {
+            Intent intentClasses = new Intent(HomeActivity.this, HomeActivity.class);
+            startActivity(intentClasses);
+        } else if (id == R.id.nav_contact) {
+            Intent intentContact = new Intent(HomeActivity.this, ContactUs.class);
+            startActivity(intentContact);
 
+        } else if (id == R.id.nav_report) {
+            Intent intentAbout = new Intent(HomeActivity.this, Report.class);
+            startActivity(intentAbout);
 
         } else if (id == R.id.nav_about) {
             Intent intentAbout = new Intent(HomeActivity.this, About.class);
