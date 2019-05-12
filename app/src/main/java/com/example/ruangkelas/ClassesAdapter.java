@@ -38,7 +38,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.MyViewHo
         holder.kelasNama.setText(listClasses.get(position).getNamaKelas());
         holder.kelasSubjek.setText(listClasses.get(position).getSubjekKelas());
         holder.kelasAuthor.setText(listClasses.get(position).getAuthorKelas());
-        holder.kelasAuthor.setOnClickListener(new View.OnClickListener() {
+        holder.kelasNama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, MainActivity.class);
