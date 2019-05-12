@@ -37,7 +37,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/subject"
+        android:id="@+id/classSubject"
         android:layout_below="@+id/classname"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
@@ -47,24 +47,24 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/author"
-        android:layout_below="@+id/subject"
+        android:id="@+id/classAuthor"
+        android:layout_below="@+id/classSubject"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="Author"/>
 
     <Button
+        android:id="@+id/saveclass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/saveclass"
-        android:layout_below="@+id/author"
-        android:layout_marginTop="40dp"
+        android:layout_below="@id/classAuthor"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/button"
         android:text="Save"
-        android:textColor="@color/white"
-        android:background="@drawable/button"/>
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>

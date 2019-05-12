@@ -12,26 +12,14 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/tugas"
-        android:text="Contoh Kelas"
-        android:textAlignment="center"
-        android:background="@drawable/button_login_form"
-        android:layout_below="@+id/timeline"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-
 
     <EditText
         android:id="@+id/newAnnounce"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tugas"
+        android:layout_below="@+id/newTitleAnounce"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:hint="Add new announce..." />
 
@@ -39,7 +27,7 @@
         android:id="@+id/newTitleAnounce"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tugas"
+        android:layout_below="@+id/timeline"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
@@ -60,7 +48,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_pengumuman"
         android:layout_width="match_parent"
-        android:layout_height="387dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/newAnnounce"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"

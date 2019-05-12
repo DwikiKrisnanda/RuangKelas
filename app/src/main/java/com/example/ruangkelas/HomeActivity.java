@@ -3,7 +3,8 @@ package com.example.ruangkelas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,10 +14,13 @@ import android.support.v4.widget.DrawerLayout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    List<Classes> listClasses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,20 @@ public class HomeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        listClasses = new ArrayList<>();
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
+        showClasses();
+    }
+
+    private void showClasses() {
+        RecyclerView recyclerView = findViewById(R.id.rec_class);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ClassesAdapter adapter = new ClassesAdapter(this, listClasses);
+        recyclerView.setAdapter(adapter);
     }
 
     public void PindahKelas(View view) {
