@@ -44,10 +44,12 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         listClasses = new ArrayList<>();
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Agung Cahyawan"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
         showClasses();
     }
 
