@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class DisplayLogin extends AppCompatActivity {
-    @Override
+    /*@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
@@ -17,5 +17,5 @@ public class DisplayLogin extends AppCompatActivity {
 
         TextView displayinfo = (TextView) findViewById(R.id.User);
         displayinfo.setText(display);
-    }
+    }*/
 }
