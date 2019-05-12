@@ -19,6 +19,7 @@
         <activity android:name=".About"/>
         <activity android:name=".CreateClassActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".DetailAssigment" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/linearLayout2"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
+
+
+            <ImageView
+                android:id="@+id/imageTgs"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_weight="70"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/namaTgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageTgs"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Nama Tugas"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/judulDetailTgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateTgs"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Detail Tugas"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/detailTgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judulDetailTgs"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+
+                android:fontFamily="@font/roboto"
+                android:text="Detail Tugas"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dateTgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namaTgs"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/roboto"
+                android:text="Date"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

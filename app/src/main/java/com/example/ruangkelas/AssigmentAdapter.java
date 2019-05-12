@@ -1,12 +1,15 @@
 package com.example.ruangkelas;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -31,13 +34,25 @@ public class AssigmentAdapter extends RecyclerView.Adapter<AssigmentAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         Glide.with(context)
                 .asBitmap()
                 .load(listAssigment.get(position).getFotoAssigment())
                 .into(holder.fotoTugas);
         holder.namaTugas.setText(listAssigment.get(position).getNamaAssigment());
         holder.tanggalTugas.setText(listAssigment.get(position).getTanggalAssigment());
+
+        holder.namaTugas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailAssigment.class);
+                intent.putExtra("link",listAssigment.get(position).getFotoAssigment());
+                intent.putExtra("nama",listAssigment.get(position).getNamaAssigment());
+                intent.putExtra("date",listAssigment.get(position).getTanggalAssigment());
+                intent.putExtra("detail",listAssigment.get(position).getDetailAssigment());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

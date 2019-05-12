@@ -4,15 +4,25 @@ public class Assigment {
     private String namaAssigment;
     private String tanggalAssigment;
     private String fotoAssigment;
+    private String detailAssigment;
 
     public Assigment() {
 
     }
 
-    public Assigment(String namaAssigment, String tanggalAssigment, String fotoAssigment) {
+    public Assigment(String namaAssigment, String tanggalAssigment, String fotoAssigment, String detailAssigment) {
         this.namaAssigment = namaAssigment;
         this.tanggalAssigment = tanggalAssigment;
         this.fotoAssigment = fotoAssigment;
+        this.detailAssigment = detailAssigment;
+    }
+
+    public String getDetailAssigment() {
+        return detailAssigment;
+    }
+
+    public void setDetailAssigment(String detailAssigment) {
+        this.detailAssigment = detailAssigment;
     }
 
     public String getNamaAssigment() {
