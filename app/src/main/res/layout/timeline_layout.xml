@@ -1,57 +1,100 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp">
+    android:background="@color/background">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/linierbiru"
+        android:background="@drawable/gradient"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeline"
+            android:layout_marginLeft="250dp"
+            android:layout_gravity="center"
+            android:textSize="26dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
     <TextView
-        android:id="@+id/timeline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Timeline"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
-
-
-    <EditText
-        android:id="@+id/newAnnounce"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/newTitleAnounce"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:hint="Add new announce..." />
-
-    <EditText
-        android:id="@+id/newTitleAnounce"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/timeline"
-        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/linierbiru"
+        android:id="@+id/addAnnounce"
+        android:text="Add announce"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Add new title announce..." />
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="1dp"
+        android:textSize="18dp"
+        android:textColor="@color/color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/backgroundItem"
+        android:layout_below="@+id/addAnnounce"
+        android:id="@+id/announceLayout"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/newTitleAnnounce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newAnounce"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
+                android:layout_marginRight="20dp"
+                android:hint="Title announce..." />
+
+            <EditText
+                android:id="@+id/newAnounce"
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:hint="Announce..." />
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/announceLayout"
+        android:background="@drawable/allButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:text="Add" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tugas"
-        android:layout_alignTop="@+id/newAnnounce"
-        android:layout_alignBottom="@+id/newAnnounce"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/newAnnounce"
-        android:text="Add" />
+        android:layout_below="@+id/save"
+        android:id="@+id/announce"
+        android:text="Announce"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/color"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_pengumuman"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newAnnounce"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp" />
-
+        android:layout_below="@+id/announce"
+        android:layout_marginTop="15dp" />
 </RelativeLayout>

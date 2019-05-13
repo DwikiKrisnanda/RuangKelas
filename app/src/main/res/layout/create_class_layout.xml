@@ -3,32 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create class"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/linierbiru"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/close" />
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Class"
+            android:layout_marginLeft="170dp"
+            android:layout_gravity="center"
+            android:textSize="26dp"
+            android:textColor="@color/white" />
 
-    <TextView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignTop="@+id/create"
-        android:layout_alignBottom="@+id/create"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/close" />
+    </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/classname"
         android:layout_height="50dp"
-        android:layout_below="@+id/create"
+        android:layout_below="@+id/linierbiru"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -62,7 +65,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/button"
+        android:background="@drawable/allButton"
         android:text="Save"
         android:textColor="@color/white" />
 

@@ -2,7 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
+    android:background="@drawable/backgroundItem"
     android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/activity_vertical_margin">
@@ -19,11 +23,11 @@
         android:id="@+id/namaPengirim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_marginBottom="8dp"
         android:layout_toRightOf="@+id/imagePengirim"
         android:fontFamily="@font/roboto_black"
-        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
         android:textStyle="bold"
         tools:text="Nama Pengirim" />
 
@@ -32,7 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/namaPengirim"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/imagePengirim"
         android:fontFamily="@font/roboto_black"
         android:textSize="16sp"
@@ -43,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imagePengirim"
+        android:textSize="13dp"
         android:layout_marginTop="20dp"
         android:text="Deskripsi Pengumuman" />
 

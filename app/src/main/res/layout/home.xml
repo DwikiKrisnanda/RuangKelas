@@ -6,56 +6,55 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="120dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="vertical"
-            android:background="@drawable/button"
-            android:weightSum="3">
+            android:background="@drawable/backgroundItem"
+            android:weightSum="2">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/namaClasses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="14dp"
+                    android:textAllCaps="true"
                     android:fontFamily="@font/roboto_black"
                     android:text="Nama"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp" />
                 <TextView
                     android:id="@+id/subjectClasses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="25dp"
                     android:text="Subject"
-                    android:textColor="@color/white" />
+                    android:textSize="15dp"
+                    android:textColor="#9a9a9a"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
                 <TextView
+                    android:id="@+id/authorClasses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
                     android:text="Author"
-                    android:id="@+id/authorClasses"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginLeft="20dp"/>
+                    android:textSize="10dp"
+                    android:textAllCaps="true"
+                    android:textColor="#9a9a9a" />
             </LinearLayout>
         </LinearLayout>
 
