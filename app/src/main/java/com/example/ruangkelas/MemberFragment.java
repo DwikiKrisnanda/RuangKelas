@@ -15,7 +15,9 @@ import java.util.List;
 public class MemberFragment extends Fragment {
     View v;
     RecyclerView recyclerView;
+    RecyclerView recyclerView2;
     List<Mahasiswa> listMahasiswa;
+    List<Dosen> listDosen;
 
     public MemberFragment() {
 
@@ -26,10 +28,14 @@ public class MemberFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.member_layout,container,false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.rec_mahasiswa);
+        recyclerView = (RecyclerView) v.findViewById(R.id.rec_Mahasiswa);
         MahasiswaAdapter viewAdapter = new MahasiswaAdapter(getContext(), listMahasiswa);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(viewAdapter);
+        recyclerView2 = (RecyclerView) v.findViewById(R.id.rec_Dosen);
+        DosenAdapter viewAdapter2 = new DosenAdapter(getContext(), listDosen);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView2.setAdapter(viewAdapter2);
         return v;
     }
 
@@ -53,5 +59,8 @@ public class MemberFragment extends Fragment {
         listMahasiswa.add(new Mahasiswa("Bilal Suryananda","1705552035","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Aditya Mahendra","1705552043","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Dwiki Krisnanda","1705552045","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
+
+        listDosen = new ArrayList<>();
+        listDosen.add(new Dosen("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
     }
 }

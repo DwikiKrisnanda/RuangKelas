@@ -35,7 +35,7 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recDosen"
+        android:id="@+id/rec_Dosen"
         android:layout_below="@+id/dosen">
     </android.support.v7.widget.RecyclerView>
     <TextView
@@ -46,13 +46,13 @@
         android:layout_marginLeft="30dp"
         android:textColor="@color/color"
         android:textSize="20dp"
-        android:layout_below="@+id/recDosen"
+        android:layout_below="@+id/rec_Dosen"
         android:layout_marginTop="30dp"
         android:textStyle="bold"/>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/redMahasiswa"
+        android:id="@+id/rec_Mahasiswa"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/mahasiswa">
     </android.support.v7.widget.RecyclerView>

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:background="@drawable/backgroundItem"
+    android:background="@drawable/backgrounditem"
     android:orientation="horizontal"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
@@ -13,11 +13,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imagePengirim"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="58dp"
+        android:layout_height="66dp"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        tools:src="@android:color/darker_gray"/>
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        tools:src="@android:color/darker_gray" />
 
     <TextView
         android:id="@+id/namaPengirim"
@@ -27,7 +27,7 @@
         android:layout_toRightOf="@+id/imagePengirim"
         android:fontFamily="@font/roboto_black"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:text="Nama Pengirim" />
 
