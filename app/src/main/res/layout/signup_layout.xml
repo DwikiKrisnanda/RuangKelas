@@ -29,7 +29,6 @@
                 android:layout_height="wrap_content"
                 android:padding="13dp"
                 android:drawablePadding="15dp"
-                android:background="@drawable/edittext"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:drawableLeft="@drawable/user"
@@ -44,7 +43,6 @@
                 android:layout_height="wrap_content"
                 android:padding="13dp"
                 android:drawablePadding="15dp"
-                android:background="@drawable/edittext"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:drawableLeft="@drawable/email"
@@ -60,10 +58,8 @@
                 android:padding="13dp"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="15dp"
-                android:background="@drawable/edittext"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:drawableLeft="@drawable/password"
                 android:hint="Password"
                 android:textColorHint="@color/white" />
             <EditText
@@ -75,10 +71,8 @@
                 android:padding="13dp"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="15dp"
-                android:background="@drawable/edittext"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:drawableLeft="@drawable/password"
                 android:hint="Confirm Password"
                 android:textColorHint="@color/white" />
             <Button

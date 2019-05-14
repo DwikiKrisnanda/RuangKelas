@@ -61,11 +61,6 @@ public class HomeActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
     }
 
-    public void PindahKelas(View view) {
-        Intent intent4 = new Intent(HomeActivity.this, MainActivity.class);
-        startActivity(intent4);
-    }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
