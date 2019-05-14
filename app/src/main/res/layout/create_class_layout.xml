@@ -14,15 +14,16 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/close" />
+            android:background="@drawable/back" />
         <TextView
             android:id="@+id/create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Class"
-            android:layout_marginLeft="170dp"
+            android:textAllCaps="true"
+            android:layout_marginLeft="85dp"
             android:layout_gravity="center"
-            android:textSize="26dp"
+            android:textSize="20dp"
             android:textColor="@color/white" />
 
     </LinearLayout>
@@ -35,10 +36,9 @@
             android:layout_width="match_parent"
             android:id="@+id/classname"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittextblack"
             android:drawablePadding="20dp"
             android:padding="15dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/colorAccent"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -49,9 +49,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/classSubject"
             android:layout_below="@+id/classname"
-            android:background="@drawable/edittextblack"
             android:padding="15dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/colorAccent"
             android:drawablePadding="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
@@ -63,9 +62,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/classAuthor"
             android:layout_below="@+id/classSubject"
-            android:background="@drawable/edittextblack"
             android:padding="15dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/colorAccent"
             android:drawablePadding="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
@@ -81,7 +79,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/button_home"
-            android:text="Save"
+            android:text="Create"
             android:textColor="@color/white" />
 
     </RelativeLayout>

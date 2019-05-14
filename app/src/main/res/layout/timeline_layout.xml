@@ -7,16 +7,22 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:id="@+id/linierbiru"
-        android:background="@drawable/gradient"
-        android:layout_weight="1">
+        android:background="@drawable/gradient">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back" />
         <TextView
             android:id="@+id/timeline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Timeline"
-            android:layout_marginLeft="250dp"
+            android:layout_marginLeft="115dp"
             android:layout_gravity="center"
-            android:textSize="26dp"
+            android:textAllCaps="true"
+            android:textSize="20dp"
             android:textColor="@color/white" />
     </LinearLayout>
     <LinearLayout
@@ -35,36 +41,65 @@
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="1dp"
             android:textSize="18dp"
-            android:textColor="@color/color"/>
+            android:textColor="@color/colorPrimary"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/addAnnounce"
+            android:layout_marginTop="10dp"
             android:id="@+id/announceLayout"
             android:weightSum="2"
             android:orientation="vertical">
-            <EditText
-                android:id="@+id/newTitleAnnounce"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/newAnounce"
-                android:hint="Title"
-                android:layout_marginTop="10dp"
-                android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:textSize="15dp"
-                android:layout_marginRight="20dp" />
-
-            <EditText
-                android:id="@+id/newAnounce"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:id="@+id/newTitleAnnounce"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newAnounce"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="50dp"
+                    android:textSize="15dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:textSize="15dp"
-                android:padding="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:hint="Announce..." />
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Announce"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:id="@+id/newAnounce"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="73dp" />
+            </LinearLayout>
         </LinearLayout>
         <Button
             android:id="@+id/save"
@@ -79,8 +114,6 @@
             android:layout_marginRight="10dp"
             android:text="Add" />
     </LinearLayout>
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,7 +123,7 @@
         android:textSize="18dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:textColor="@color/color"/>
+        android:textColor="@color/colorPrimary"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_pengumuman"

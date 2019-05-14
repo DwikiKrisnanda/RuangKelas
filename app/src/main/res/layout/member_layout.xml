@@ -9,16 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:id="@+id/linierbiru"
-        android:background="@drawable/gradient"
-        android:layout_weight="1">
+        android:background="@drawable/gradient">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back" />
         <TextView
             android:id="@+id/member"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Member"
-            android:layout_marginLeft="250dp"
+            android:textAllCaps="true"
+            android:layout_marginLeft="115dp"
             android:layout_gravity="center"
-            android:textSize="26dp"
+            android:textSize="20dp"
             android:textColor="@color/white" />
     </LinearLayout>
     <TextView
