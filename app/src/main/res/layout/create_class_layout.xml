@@ -27,47 +27,65 @@
 
     </LinearLayout>
 
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:id="@+id/classname"
-        android:layout_height="50dp"
-        android:layout_below="@+id/linierbiru"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Class name"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linierbiru">
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/classname"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextblack"
+            android:drawablePadding="20dp"
+            android:padding="15dp"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Class name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/classSubject"
-        android:layout_below="@+id/classname"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Subject"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classSubject"
+            android:layout_below="@+id/classname"
+            android:background="@drawable/edittextblack"
+            android:padding="15dp"
+            android:textColorHint="@color/black"
+            android:drawablePadding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Subject"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/classAuthor"
-        android:layout_below="@+id/classSubject"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Author"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classAuthor"
+            android:layout_below="@+id/classSubject"
+            android:background="@drawable/edittextblack"
+            android:padding="15dp"
+            android:textColorHint="@color/black"
+            android:drawablePadding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Author"/>
 
-    <Button
-        android:id="@+id/saveclass"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/classAuthor"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/button_home"
-        android:text="Save"
-        android:textColor="@color/white" />
+        <Button
+            android:id="@+id/saveclass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/classAuthor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_home"
+            android:text="Save"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
 
 
 </RelativeLayout>

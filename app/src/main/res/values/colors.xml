@@ -7,7 +7,6 @@
     <color name="color">#0142BB</color>
     <color name="colorButton">#001C54</color>
     <color name="black">#000000</color>
-    <color name="button">#6C98FF</color>
-    <color name="background">#EAEDF4</color>
+    <color name="background">#EEEEEE</color>
 
 </resources>

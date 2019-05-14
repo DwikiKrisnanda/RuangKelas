@@ -32,64 +32,31 @@
         android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:id="@+id/dosen"/>
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:id="@+id/layout_dosen"
-        android:layout_below="@+id/dosen"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/backgroundItem"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_weight="2">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/image_dosen"
-                    android:layout_weight="1"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    tools:src="@drawable/iconuser"/>
-                <TextView
-                    android:id="@+id/namadosen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/image_dosen"
-                    android:text="Agung Cahyawan"
-                    android:textSize="18dp" />
-            </LinearLayout>
-        </LinearLayout>
+        android:id="@+id/recDosen"
+        android:layout_below="@+id/dosen">
+    </android.support.v7.widget.RecyclerView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mahasiswa"
+        android:id="@+id/mahasiswa"
         android:layout_marginLeft="30dp"
         android:textColor="@color/color"
         android:textSize="20dp"
-        android:layout_below="@+id/layout_dosen"
+        android:layout_below="@+id/recDosen"
         android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:id="@+id/mahasiswa"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_below="@+id/mahasiswa"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="2">
+        android:textStyle="bold"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/redMahasiswa"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/mahasiswa">
+    </android.support.v7.widget.RecyclerView>
 
-                <android.support.v7.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-                </android.support.v7.widget.RecyclerView>
-        </LinearLayout>
+
 </RelativeLayout>
 
