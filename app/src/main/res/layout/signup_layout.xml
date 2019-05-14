@@ -27,6 +27,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
                 android:padding="13dp"
                 android:drawablePadding="15dp"
                 android:layout_marginLeft="40dp"
@@ -41,6 +42,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
                 android:padding="13dp"
                 android:drawablePadding="15dp"
                 android:layout_marginLeft="40dp"
@@ -57,8 +59,10 @@
                 android:layout_height="wrap_content"
                 android:padding="13dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
                 android:drawablePadding="15dp"
                 android:layout_marginLeft="40dp"
+                android:drawableLeft="@drawable/lock"
                 android:layout_marginRight="40dp"
                 android:hint="Password"
                 android:textColorHint="@color/white" />
@@ -72,7 +76,9 @@
                 android:layout_marginTop="10dp"
                 android:drawablePadding="15dp"
                 android:layout_marginLeft="40dp"
+                android:background="@drawable/edittext"
                 android:layout_marginRight="40dp"
+                android:drawableLeft="@drawable/lock"
                 android:hint="Confirm Password"
                 android:textColorHint="@color/white" />
             <Button
