@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,7 @@ public class TimelineFragment extends Fragment {
     View v3;
     RecyclerView recyclerView;
     List<Timeline> listTimeline;
+    private TimelineAdapter tlAdapter;
 
     public TimelineFragment() {
 
@@ -27,9 +30,9 @@ public class TimelineFragment extends Fragment {
 
         v3 = inflater.inflate(R.layout.timeline_layout,container,false);
         recyclerView = (RecyclerView) v3.findViewById(R.id.rec_pengumuman);
-        TimelineAdapter viewAdapter = new TimelineAdapter(getContext(), listTimeline);
+        tlAdapter = new TimelineAdapter(getContext(), listTimeline);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(viewAdapter);
+        recyclerView.setAdapter(tlAdapter);
         return v3;
     }
 
@@ -44,5 +47,22 @@ public class TimelineFragment extends Fragment {
         listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","Jadwal Pengganti","Kuliah hari senin besok diganti ke hari rabu jam 10.00 WITA","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","Jadwal Pengganti","Kuliah hari senin besok diganti ke hari rabu jam 10.00 WITA","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","Jadwal Pengganti","Kuliah hari senin besok diganti ke hari rabu jam 10.00 WITA","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
+    }
+
+    private void setInsertButton() {
+        Button buttonInsert = v3.findViewById(R.id.save);
+        buttonInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText titleAnnounce = v3.findViewById(R.id.newTitleAnnounce);
+                EditText announce = v3.findViewById(R.id.newAnounce);
+                insertItem(titleAnnounce.getText().toString(), announce.getText().toString());
+            }
+        });
+    }
+
+    private void insertItem(String titleAnnounce, String announce) {
+        listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT" ,titleAnnounce, announce, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
+        tlAdapter.notifyItemInserted(listTimeline.size());
     }
 }
