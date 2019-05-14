@@ -3,36 +3,30 @@
     android:background="@color/background"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
+            android:id="@+id/linierbiru"
             android:layout_height="80dp"
-            android:background="@drawable/gradient"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/gradient">
+
             <TextView
                 android:id="@+id/assignment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Assignment"
-                android:layout_marginLeft="250dp"
                 android:layout_gravity="center"
-                android:textSize="26dp"
-                android:textColor="@color/white" />
+                android:layout_marginLeft="250dp"
+                android:text="Assignment"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rec_assigment"
             android:layout_width="match_parent"
-            android:layout_height="593dp"
-            android:layout_below="@+id/assignment"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linierbiru">
 
         </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
 
 
 </RelativeLayout>
