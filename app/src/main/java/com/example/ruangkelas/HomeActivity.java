@@ -21,6 +21,7 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     List<Classes> listClasses;
+    public ClassesAdapter clsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,8 @@ public class HomeActivity extends AppCompatActivity
         RecyclerView recyclerView = findViewById(R.id.rec_class);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ClassesAdapter adapter = new ClassesAdapter(this, listClasses);
-        recyclerView.setAdapter(adapter);
+        clsAdapter = new ClassesAdapter(this, listClasses);
+        recyclerView.setAdapter(clsAdapter);
     }
 
     @Override
