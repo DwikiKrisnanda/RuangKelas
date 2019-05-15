@@ -33,10 +33,10 @@ public class DetailAssigment extends AppCompatActivity {
         namaDetail.setText(Nama);
         TextView posisiDetail = findViewById(R.id.dateTgs);
         posisiDetail.setText(Date);
-        TextView det = findViewById(R.id.detailTgs);
+        TextView det = findViewById(R.id.judulDetailTgs);
         det.setText(Detail);
 
-        ImageView gambarDetail = findViewById(R.id.imageTgs);
+        ImageView gambarDetail = findViewById(R.id.imgTugas);
         Glide.with(this)
                 .asBitmap()
                 .load(Link)
