@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/linearLayout2"
+    android:background="@color/background"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -40,7 +40,6 @@
             android:text="Date"
             android:textColor="#FFF"
             android:textSize="13sp" />
-
         <TextView
             android:id="@+id/namaTgs"
             android:layout_width="wrap_content"
@@ -51,64 +50,35 @@
             android:text="Nama Tugas"
             android:textColor="#FFFF"
             android:textSize="26sp"
+            android:layout_marginBottom="10dp"
             android:textStyle="bold"
             android:typeface="normal" />
-
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backgrounditem"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/linierbiru">
         <TextView
             android:id="@+id/judulDetailTgs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dateTgs"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/roboto_black"
             android:text="Detail Tugas"
-            android:textColor="#fff"
-            android:layout_marginBottom="50dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
             android:textSize="15sp"
             android:typeface="normal" />
-
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linierbiru"
-        android:id="@+id/commentLayout">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sendComment"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:hint="Add class comment"
-            android:drawablePadding="20dp"
-            android:padding="20dp"
-            android:drawableLeft="@drawable/comment"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/commentLayout"
-        tools:ignore="UnknownId">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Your answer"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/colorPrimary"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/jawaban"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Jawaban detail"/>
-    </LinearLayout>
 
 </RelativeLayout>

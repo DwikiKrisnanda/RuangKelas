@@ -11,31 +11,23 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp"
         android:scaleType="fitStart"
         android:src="@drawable/bghome"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/ruangkelas"
-        android:text="Ruang Kelas"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="#FFFF" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_below="@+id/ruangkelas"
-        android:text="Manage your class easily "
-        android:textSize="12dp"
-        android:textColor="#FFFF" />
+    <ImageView
+        android:layout_width="150dp"
+        android:id="@+id/logohome"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitStart"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="170dp">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rec_class"
             android:layout_width="match_parent"

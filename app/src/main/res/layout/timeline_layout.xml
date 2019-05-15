@@ -56,25 +56,25 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center"/>
-                <EditText
-                    android:id="@+id/newTitleAnnounce"
-                    android:layout_weight="1"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/newAnounce"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginRight="50dp"
-                    android:textSize="15dp"
-                    />
+                    android:id="@+id/inputLayoutTitle">
+                    <EditText
+                        android:id="@+id/newTitleAnnounce"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newAnounce"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColorHint="@color/colorPrimary"
+                        android:layout_marginRight="20dp"
+                        android:textSize="15dp"
+                        />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,23 +82,23 @@
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 android:weightSum="2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Announce"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center"/>
-                <EditText
-                    android:id="@+id/newAnounce"
-                    android:layout_weight="1"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:textSize="15dp"
-                    android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginRight="73dp" />
+                    android:id="@+id/inputLayoutAnnounce">
+                    <EditText
+                        android:id="@+id/newAnounce"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:textSize="15dp"
+                        android:ems="10"
+                        android:hint="Announce"
+                        android:singleLine="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
         <Button
