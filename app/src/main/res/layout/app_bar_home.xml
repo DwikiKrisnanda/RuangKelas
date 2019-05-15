@@ -48,11 +48,13 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true">
+
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addClass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="340dp"
+            android:layout_marginLeft="330dp"
+            app:backgroundTint="@color/colorPrimary"
             app:srcCompat="@drawable/tambah" />
     </LinearLayout>
 </RelativeLayout>

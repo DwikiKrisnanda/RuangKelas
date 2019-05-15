@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,8 @@ public class TimelineFragment extends Fragment {
     RecyclerView recyclerView;
     List<Timeline> listTimeline;
     private TimelineAdapter tlAdapter;
+    EditText editTextNewTtlAnn;
+    EditText editTextNewAnn;
 
     public TimelineFragment() {
 
@@ -32,6 +36,21 @@ public class TimelineFragment extends Fragment {
         tlAdapter = new TimelineAdapter(getContext(), listTimeline);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(tlAdapter);
+        editTextNewTtlAnn=(EditText) v3.findViewById(R.id.newTitleAnnounce);
+        editTextNewAnn=(EditText) v3.findViewById(R.id.newAnounce);
+        Button btAdd=(Button) v3.findViewById(R.id.save);
+        btAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+                String newTtlAnn=editTextNewTtlAnn.getText().toString();
+                String newAnn=editTextNewAnn.getText().toString();
+                // add new item to arraylist
+                listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","" + newTtlAnn, "" + newAnn,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
+                // notify listview of data changed
+                tlAdapter.notifyDataSetChanged();
+            }
+
+        });
         return v3;
     }
 
