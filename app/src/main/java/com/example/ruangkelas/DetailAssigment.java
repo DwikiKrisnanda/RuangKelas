@@ -24,11 +24,11 @@ public class DetailAssigment extends AppCompatActivity {
             String Nama = getIntent().getStringExtra("nama");
             String Date = getIntent().getStringExtra("date");
             String Detail = getIntent().getStringExtra("detail");
-            setImage(Link,Nama,Date,Detail);
+            setData(Link,Nama,Date,Detail);
         }
     }
 
-    private void setImage(String Link, String Nama, String Date, String Detail){
+    private void setData(String Link, String Nama, String Date, String Detail){
         TextView namaDetail = findViewById(R.id.namaTgs);
         namaDetail.setText(Nama);
         TextView posisiDetail = findViewById(R.id.dateTgs);
