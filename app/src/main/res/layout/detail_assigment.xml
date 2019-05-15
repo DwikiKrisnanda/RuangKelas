@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/linierbiru"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/gradient"
         android:orientation="vertical">
 
@@ -63,6 +63,7 @@
             android:fontFamily="@font/roboto_black"
             android:text="Detail Tugas"
             android:textColor="#fff"
+            android:layout_marginBottom="50dp"
             android:textSize="15sp"
             android:typeface="normal" />
 
