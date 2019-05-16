@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-70dp"
+        android:id="@+id/biru"
         android:scaleType="fitStart"
         android:src="@drawable/bghome"/>
     <ImageView
@@ -22,31 +21,102 @@
         android:layout_marginTop="35dp"
         android:src="@drawable/logo"
         android:scaleType="fitStart"/>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:id="@+id/tulisan"
         android:layout_marginTop="170dp">
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rec_class"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:text="Create Class"
+            android:textSize="25sp"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true">
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/addClass"
-            android:layout_width="wrap_content"
+        android:background="@drawable/backgrounditem"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/tulisan"
+        android:id="@+id/layoutCreateClass">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="330dp"
-            app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/tambah" />
+            android:textColorHint="@color/colorAccent">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/classname"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Class name"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorAccent">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/classSubject"
+                android:layout_below="@+id/classname"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="30dp"
+                android:ems="10"
+                android:layout_marginRight="30dp"
+                android:hint="Subject"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorAccent"
+            android:id="@+id/inputAuthor">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/classAuthor"
+                android:layout_below="@+id/classSubject"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Author"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/saveclass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/classAuthor"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_home"
+            android:text="Create"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layoutCreateClass"
+        android:layout_marginTop="5dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

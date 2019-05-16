@@ -55,7 +55,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:id="@+id/garis1"
         android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
@@ -100,7 +100,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:id="@+id/garis2"
         android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
