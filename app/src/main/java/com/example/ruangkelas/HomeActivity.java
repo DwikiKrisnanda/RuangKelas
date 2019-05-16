@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,9 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     List<Classes> listClasses;
     public ClassesAdapter clsAdapter;
+    EditText clsName;
+    EditText clsSubject;
+    EditText clsAuthor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,20 @@ public class HomeActivity extends AppCompatActivity
         listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
         listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
         listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+
+        Button buttonSave = findViewById(R.id.saveclass);
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String newClsName=clsName.getText().toString();
+                String newClsSubject=clsSubject.getText().toString();
+                String newClsAuthor=clsAuthor.getText().toString();
+                // add new item to arraylist
+                listClasses.add(new Classes("" + newClsName, "" + newClsSubject, "" + newClsAuthor));
+                // notify listview of data changed
+                clsAdapter.notifyDataSetChanged();
+            }
+        });
         showClasses();
     }
 
