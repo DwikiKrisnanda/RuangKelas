@@ -33,12 +33,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linierDosen"
+        android:weightSum="2"
         android:layout_marginTop="10dp"
         android:layout_below="@id/linierbiru"
         android:orientation="horizontal">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             app:boxBackgroundColor="@color/colorPrimary"
             android:id="@+id/edittextDosen">
             <EditText
@@ -47,10 +49,15 @@
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:drawableRight="@drawable/adduser"
-                android:hint="Tambah Dosen"/>
+                android:hint="Add Dosen"/>
         </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="60dp"
+            android:id="@+id/addDosen"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adduser"/>
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -63,12 +70,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linierMahasiswa"
+        android:weightSum="2"
         android:layout_marginTop="10dp"
         android:layout_below="@id/rec_Dosen"
         android:orientation="horizontal">
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/edittextMahasiswa">
             <EditText
                 android:layout_width="match_parent"
@@ -76,17 +85,50 @@
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:drawableRight="@drawable/adduser"
-                android:hint="Tambah Mahasiswa"/>
+                android:hint="Add Mahasiswa"/>
         </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_gravity="center"
+            android:id="@+id/addMahasiswa"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adduser"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linierNIM"
+        android:weightSum="2"
+        android:layout_below="@id/linierMahasiswa"
+        android:orientation="horizontal">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/edittextNIM">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="30dp"
+            android:hint="Add NIM"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/addNIM"
+        android:background="@drawable/adduser"/>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rec_Mahasiswa"
-        android:layout_below="@+id/linierMahasiswa">
+        android:layout_below="@+id/linierNIM">
     </android.support.v7.widget.RecyclerView>
 
 
