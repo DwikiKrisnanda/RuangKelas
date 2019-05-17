@@ -18,12 +18,17 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-                <TextView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
                     android:id="@+id/namaClasses"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
                     android:layout_marginTop="14dp"
                     android:textAllCaps="true"
                     android:fontFamily="@font/roboto_black"
@@ -32,6 +37,14 @@
                     android:textColorHint="@color/colorAccent"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="35dp"
+                        android:background="@drawable/delete"/>
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/subjectClasses"
                     android:layout_width="match_parent"
