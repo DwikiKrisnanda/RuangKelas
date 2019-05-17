@@ -69,10 +69,11 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/newAnounce"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="30dp"
                         android:textColorHint="@color/colorPrimary"
-                        android:layout_marginRight="20dp"
-                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="30dp"
+                        android:textSize="13dp"
                         />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
@@ -92,12 +93,13 @@
                         android:layout_width="match_parent"
                         android:textSize="15dp"
                         android:ems="10"
+                        android:textColor="@color/colorPrimary"
                         android:hint="Announce"
                         android:singleLine="true"
                         android:layout_marginTop="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp" />
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -108,10 +110,10 @@
             android:layout_below="@id/announceLayout"
             android:background="@drawable/button_home"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="30dp"
             android:text="Add" />
     </LinearLayout>
     <TextView
