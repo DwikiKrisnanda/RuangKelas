@@ -44,6 +44,19 @@ public class HomeActivity extends AppCompatActivity
         listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
         listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
 
+        showClasses();
+    }
+
+    private void showClasses() {
+        RecyclerView recyclerView = findViewById(R.id.rec_class);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        clsAdapter = new ClassesAdapter(this, listClasses);
+        recyclerView.setAdapter(clsAdapter);
+
+        clsName=(EditText) findViewById(R.id.classname);
+        clsSubject=(EditText) findViewById(R.id.classSubject);
+        clsAuthor=(EditText) findViewById(R.id.classAuthor);
         Button buttonSave = findViewById(R.id.saveclass);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,15 +70,6 @@ public class HomeActivity extends AppCompatActivity
                 clsAdapter.notifyDataSetChanged();
             }
         });
-        showClasses();
-    }
-
-    private void showClasses() {
-        RecyclerView recyclerView = findViewById(R.id.rec_class);
-        recyclerView.setHasFixedSize(false);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        clsAdapter = new ClassesAdapter(this, listClasses);
-        recyclerView.setAdapter(clsAdapter);
     }
 
     @Override
