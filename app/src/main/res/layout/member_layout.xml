@@ -10,7 +10,9 @@
         android:layout_height="80dp"
         android:id="@+id/linierbiru"
         android:background="@drawable/gradient">
+
         <TextView
+            android:id="@+id/bckMember"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

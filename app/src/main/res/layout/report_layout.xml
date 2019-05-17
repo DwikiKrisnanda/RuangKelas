@@ -10,7 +10,9 @@
         android:id="@+id/linierbiru"
         android:background="@drawable/gradient"
         android:layout_weight="1">
+
         <TextView
+            android:id="@+id/bckReport"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

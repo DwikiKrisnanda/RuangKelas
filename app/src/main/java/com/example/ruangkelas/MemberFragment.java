@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,13 +30,23 @@ public class MemberFragment extends Fragment {
 
         v = inflater.inflate(R.layout.member_layout,container,false);
         recyclerView = (RecyclerView) v.findViewById(R.id.rec_Mahasiswa);
+
         MahasiswaAdapter viewAdapter = new MahasiswaAdapter(getContext(), listMahasiswa);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(viewAdapter);
         recyclerView2 = (RecyclerView) v.findViewById(R.id.rec_Dosen);
+
         DosenAdapter viewAdapter2 = new DosenAdapter(getContext(), listDosen);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView2.setAdapter(viewAdapter2);
+
+        TextView buttonBckMember = v.findViewById(R.id.bckMember);
+        buttonBckMember.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
         return v;
     }
 

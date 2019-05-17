@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,7 @@ public class TimelineFragment extends Fragment {
         tlAdapter = new TimelineAdapter(getContext(), listTimeline);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(tlAdapter);
+
         editTextNewTtlAnn=(EditText) v3.findViewById(R.id.newTitleAnnounce);
         editTextNewAnn=(EditText) v3.findViewById(R.id.newAnounce);
         Button btAdd=(Button) v3.findViewById(R.id.save);
@@ -50,6 +52,14 @@ public class TimelineFragment extends Fragment {
                 tlAdapter.notifyDataSetChanged();
             }
 
+        });
+
+        TextView buttonBckTimeline = v3.findViewById(R.id.bckTimeline);
+        buttonBckTimeline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
         });
         return v3;
     }
