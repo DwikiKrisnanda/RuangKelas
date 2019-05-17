@@ -6,6 +6,12 @@
     android:background="@color/background"
     tools:context=".HomeActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,15 +33,7 @@
         android:orientation="horizontal"
         android:id="@+id/tulisan"
         android:layout_marginTop="170dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Create Class"
-            android:textSize="25sp"
-            android:textColor="@color/design_default_color_primary"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,8 +42,19 @@
         android:background="@drawable/backgrounditem"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/tulisan"
         android:id="@+id/layoutCreateClass">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Class"
+        android:textSize="20sp"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center" />
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="20dp"
                 android:ems="10"
+                android:textSize="13dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:hint="Class name"/>
@@ -70,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/classSubject"
                 android:layout_below="@+id/classname"
+                android:textSize="13dp"
                 android:drawablePadding="20dp"
                 android:layout_marginLeft="30dp"
                 android:ems="10"
@@ -87,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/classAuthor"
                 android:layout_below="@+id/classSubject"
-                android:drawablePadding="20dp"
+                android:textSize="13dp"
                 android:ems="10"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
@@ -97,11 +108,11 @@
         <Button
             android:id="@+id/saveclass"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_below="@id/classAuthor"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/button_home"
             android:text="Create"
             android:layout_marginBottom="20dp"
