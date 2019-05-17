@@ -16,6 +16,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:background="@drawable/back" />
+
         <TextView
             android:id="@+id/timeline"
             android:layout_width="wrap_content"
@@ -29,105 +30,86 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/announcelayout"
+        android:id="@+id/inputAnnounce"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linierbiru"
-        android:orientation="vertical">
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linierbiru"
+        android:id="@+id/layoutAnnounce">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linierbiru"
-            android:id="@+id/addAnnounce"
-            android:text="Add announce"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="1dp"
-            android:textSize="18dp"
-            android:textColor="@color/colorPrimary"/>
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/addAnnounce"
+            android:text="Add Announce"
+            android:textSize="20sp"
+            android:textColor="@color/design_default_color_primary"
             android:layout_marginTop="10dp"
-            android:id="@+id/announceLayout"
-            android:weightSum="2"
-            android:orientation="vertical">
-            <LinearLayout
+            android:layout_marginLeft="10dp" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorAccent">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/newTitleAnnounce"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:textSize="13dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Title"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorAccent">
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/inputLayoutTitle">
-                    <EditText
-                        android:id="@+id/newTitleAnnounce"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/newAnounce"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="30dp"
-                        android:textColorHint="@color/colorPrimary"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginRight="30dp"
-                        android:textSize="13dp"
-                        />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="2">
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/inputLayoutAnnounce">
-                    <EditText
-                        android:id="@+id/newAnounce"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:textSize="15dp"
-                        android:ems="10"
-                        android:textColor="@color/colorPrimary"
-                        android:hint="Announce"
-                        android:singleLine="true"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-        </LinearLayout>
+                android:id="@+id/newAnnounce"
+                android:inputType="date"
+                android:layout_below="@+id/classname"
+                android:textSize="13dp"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="30dp"
+                android:ems="10"
+                android:layout_marginRight="30dp"
+                android:hint="Announce"/>
+        </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/save"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/announceLayout"
-            android:background="@drawable/button_home"
-            android:layout_gravity="center"
+            android:layout_height="40dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
             android:layout_marginRight="30dp"
-            android:text="Add" />
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_home"
+            android:text="Add"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white" />
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/announcelayout"
+        android:layout_below="@+id/layoutAnnounce"
         android:id="@+id/announce"
         android:text="Announce"
-        android:textSize="18dp"
-        android:layout_marginTop="20dp"
+        android:textSize="20dp"
         android:layout_marginLeft="20dp"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/design_default_color_primary"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_pengumuman"

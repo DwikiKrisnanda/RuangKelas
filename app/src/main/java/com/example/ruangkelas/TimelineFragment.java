@@ -39,7 +39,7 @@ public class TimelineFragment extends Fragment {
         recyclerView.setAdapter(tlAdapter);
 
         editTextNewTtlAnn=(EditText) v3.findViewById(R.id.newTitleAnnounce);
-        editTextNewAnn=(EditText) v3.findViewById(R.id.newAnounce);
+        editTextNewAnn=(EditText) v3.findViewById(R.id.newAnnounce);
         Button btAdd=(Button) v3.findViewById(R.id.save);
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
