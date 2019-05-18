@@ -17,6 +17,6 @@
     <string name="menu_about">About</string>
     <string name="menu_logout">Logout</string>
     <string name="title_timeline">Timeline</string>
-    <string name="title_assigment">Assigment</string>
+    <string name="title_assigment">Assignment</string>
     <string name="title_members">Members</string>
 </resources>
