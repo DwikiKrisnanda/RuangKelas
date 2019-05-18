@@ -57,11 +57,12 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent">
+            android:textColorHint="@color/black">
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/newPengirim"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:textSize="13dp"
@@ -72,11 +73,12 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent">
+            android:textColorHint="@color/black">
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/newTitleAnnounce"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:textSize="13dp"
@@ -88,7 +90,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent">
+            android:textColorHint="@color/black">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,6 +99,7 @@
                 android:layout_below="@+id/classname"
                 android:textSize="13dp"
                 android:drawablePadding="20dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
                 android:ems="10"
                 android:layout_marginRight="30dp"
