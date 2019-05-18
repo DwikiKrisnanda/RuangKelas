@@ -52,7 +52,7 @@ public class LoginActivity extends Activity {
                     if(mSharedPreferences.contains(PREF_NAME) && mSharedPreferences.contains(PREF_PASSWD)){
                         SharedPreferences.Editor mEditor = mSharedPreferences.edit();
                         mEditor.apply();
-                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                         startActivity(intent);
                         finish();
                     }else {
