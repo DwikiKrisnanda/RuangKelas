@@ -18,24 +18,38 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         tools:src="@android:color/darker_gray" />
-
-    <TextView
-        android:id="@+id/namaPengirim"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_toRightOf="@+id/imagePengirim"
-        android:fontFamily="@font/roboto_black"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:text="Nama Pengirim" />
+        android:id="@+id/layoutNamaPengirim"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/namaPengirim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/imagePengirim"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            tools:text="Nama Pengirim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/delete"/>
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/namaPengumuman"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/namaPengirim"
+        android:layout_below="@+id/layoutNamaPengirim"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_toRightOf="@+id/imagePengirim"
