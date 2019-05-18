@@ -9,7 +9,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:background="@drawable/backgrounditem"
-    android:padding="10">
+    android:padding="10dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageTugas"
         android:layout_width="55dp"
