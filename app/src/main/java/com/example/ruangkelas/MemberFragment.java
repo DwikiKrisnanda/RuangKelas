@@ -89,6 +89,7 @@ public class MemberFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         listMahasiswa = new ArrayList<>();
+        listMahasiswa.add(new Mahasiswa("I Nyoman Aditya Mahendra","1705552043","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("I Made Ari Wiradana","1705552030","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Gusti Agung Mayun Kukuh Jaluwana","1705552032","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Gusti Ayu Made Pratiwi Ashari","1705552034","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
@@ -96,7 +97,6 @@ public class MemberFragment extends Fragment {
         listMahasiswa.add(new Mahasiswa("I Dewa Komang Divha Pramartha","1705552037","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Made Toby Sathya Pratika","1705552038","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Zuraida Malini Cantika Riskiyanti","1705552041","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
-        listMahasiswa.add(new Mahasiswa("I Nyoman Aditya Mahendra","1705552043","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("I Gusti Ngurah Bagus Prasetya Wijaya","1705552044","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Dwiki Krisnanda Wardy","1705552045","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
         listMahasiswa.add(new Mahasiswa("Luh Ade Ratna Amertasuli","1705552046","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
