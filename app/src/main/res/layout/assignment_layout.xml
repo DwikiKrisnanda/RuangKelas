@@ -49,7 +49,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent">
+            android:textColorHint="@color/black">
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/namaTugas"
@@ -57,15 +57,16 @@
                 android:drawablePadding="20dp"
                 android:ems="10"
                 android:textSize="13dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:hint="Nama tugas"/>
+                android:hint="Name Assignment"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent">
+            android:textColorHint="@color/black">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,10 +77,28 @@
                 android:drawablePadding="20dp"
                 android:layout_marginLeft="30dp"
                 android:ems="10"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginRight="30dp"
-                android:hint="Tanggal"/>
+                android:hint="Date Assignmet"/>
         </android.support.design.widget.TextInputLayout>
-
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailTugas"
+                android:inputType="date"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/classname"
+                android:textSize="13dp"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="30dp"
+                android:ems="10"
+                android:layout_marginRight="30dp"
+                android:hint="Detail Assignment"/>
+        </android.support.design.widget.TextInputLayout>
         <Button
             android:id="@+id/saveassignment"
             android:layout_width="match_parent"

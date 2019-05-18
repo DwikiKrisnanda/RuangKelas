@@ -25,16 +25,27 @@
         android:layout_toEndOf="@id/image_view"
         android:layout_centerVertical="true"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/namaMember"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:text="Nama" />
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:id="@+id/namaMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Nama" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/delete"
+                android:layout_marginRight="30dp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/nimMember"
