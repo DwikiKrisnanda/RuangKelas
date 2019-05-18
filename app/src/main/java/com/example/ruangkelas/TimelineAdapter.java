@@ -31,7 +31,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         Glide.with(context)
                 .asBitmap()
                 .load(listTimeline.get(position).getFotoSender())
@@ -39,6 +39,15 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.MyView
         holder.nameSender.setText(listTimeline.get(position).getNamaSender());
         holder.nameAnouncement.setText(listTimeline.get(position).getNamaAnouncement());
         holder.deskAnouncement.setText(listTimeline.get(position).getDescAnouncement());
+
+        holder.tlRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listTimeline.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position,listTimeline.size());
+            }
+        });
     }
 
     @Override
@@ -52,6 +61,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.MyView
         TextView nameAnouncement;
         TextView deskAnouncement;
         ImageView imageSender;
+        TextView tlRemove;
 
 
         public MyViewHolder(View itemView) {
@@ -61,6 +71,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.MyView
             nameAnouncement = (TextView) itemView.findViewById(R.id.namaPengumuman);
             deskAnouncement = (TextView) itemView.findViewById(R.id.deskPengumuman);
             imageSender = (ImageView) itemView.findViewById(R.id.imagePengirim);
+            tlRemove = (TextView) itemView.findViewById(R.id.rmvTimeline);
         }
     }
 }
