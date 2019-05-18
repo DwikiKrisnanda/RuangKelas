@@ -37,12 +37,12 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         listClasses = new ArrayList<>();
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
-        listClasses.add(new Classes("Kelas PROGMOB","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas Pemrograman Mobile","Kelas Paralel","Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT"));
+        listClasses.add(new Classes("Kelas Pemrograman Internet","Kelas Paralel","I Putu Arya Dharmaadi, ST.,MT"));
+        listClasses.add(new Classes("Kelas Pemrograman","Kelas Paralel","I Made Sunia Raharja, S.Kom., M.Cs"));
+        listClasses.add(new Classes("Kelas Pemrograman Berorientasi Objek","Kelas Paralel","I Putu Arya Dharmaadi, ST.,MT"));
+        listClasses.add(new Classes("Kelas Internet of Things","Kelas Paralel","Kadek Suar Wibawa, ST, MT"));
+        listClasses.add(new Classes("Kelas Interpesonal Life Skill","Kelas Paralel","Prof. Dr. I Ketut Gede Darma Putra, S.Kom., M.T."));
 
         showClasses();
     }
