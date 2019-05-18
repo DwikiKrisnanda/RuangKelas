@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,6 +21,9 @@ public class MemberFragment extends Fragment {
     RecyclerView recyclerView2;
     List<Mahasiswa> listMahasiswa;
     List<Dosen> listDosen;
+    private DosenAdapter dsnAdapter;
+    EditText editTextNewTtlAnn;
+    EditText editTextNewAnn;
 
     public MemberFragment() {
 
@@ -29,16 +34,31 @@ public class MemberFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         v = inflater.inflate(R.layout.member_layout,container,false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.rec_Mahasiswa);
 
+        recyclerView = (RecyclerView) v.findViewById(R.id.rec_Mahasiswa);
         MahasiswaAdapter viewAdapter = new MahasiswaAdapter(getContext(), listMahasiswa);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(viewAdapter);
-        recyclerView2 = (RecyclerView) v.findViewById(R.id.rec_Dosen);
 
-        DosenAdapter viewAdapter2 = new DosenAdapter(getContext(), listDosen);
+        recyclerView2 = (RecyclerView) v.findViewById(R.id.rec_Dosen);
+        dsnAdapter = new DosenAdapter(getContext(), listDosen);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView2.setAdapter(viewAdapter2);
+        recyclerView2.setAdapter(dsnAdapter);
+
+        editTextNewTtlAnn=(EditText) v.findViewById(R.id.newTitleAnnounce);
+        Button btAddDosen=(Button) v.findViewById(R.id.save);
+        btAddDosen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+                String newTtlAnn=editTextNewTtlAnn.getText().toString();
+                String newAnn=editTextNewAnn.getText().toString();
+                // add new item to arraylist
+                listDosen.add(new Dosen("",""));
+                // notify listview of data changed
+                dsnAdapter.notifyDataSetChanged();
+            }
+
+        });
 
         TextView buttonBckMember = v.findViewById(R.id.bckMember);
         buttonBckMember.setOnClickListener(new View.OnClickListener() {

@@ -34,7 +34,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         holder.kelasNama.setText(listClasses.get(position).getNamaKelas());
         holder.kelasSubjek.setText(listClasses.get(position).getSubjekKelas());
         holder.kelasAuthor.setText(listClasses.get(position).getAuthorKelas());
@@ -43,6 +43,15 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.MyViewHo
             public void onClick(View view) {
                 Intent intent = new Intent(context, MainActivity.class);
                 context.startActivity(intent);
+            }
+        });
+
+        holder.kelasRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listClasses.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position,listClasses.size());
             }
         });
     }
@@ -57,6 +66,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.MyViewHo
         TextView kelasNama;
         TextView kelasSubjek;
         TextView kelasAuthor;
+        TextView kelasRemove;
 
 
         public MyViewHolder(View itemView) {
@@ -65,6 +75,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.MyViewHo
             kelasNama = (TextView) itemView.findViewById(R.id.namaClasses);
             kelasSubjek = (TextView) itemView.findViewById(R.id.subjectClasses);
             kelasAuthor = (TextView) itemView.findViewById(R.id.authorClasses);
+            kelasRemove = (TextView) itemView.findViewById(R.id.rmvClass);
         }
     }
 }
