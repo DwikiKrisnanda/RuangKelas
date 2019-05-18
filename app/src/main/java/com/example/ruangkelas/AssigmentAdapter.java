@@ -53,6 +53,15 @@ public class AssigmentAdapter extends RecyclerView.Adapter<AssigmentAdapter.MyVi
                 context.startActivity(intent);
             }
         });
+
+        holder.assignRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listAssigment.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position,listAssigment.size());
+            }
+        });
     }
 
     @Override
@@ -65,6 +74,7 @@ public class AssigmentAdapter extends RecyclerView.Adapter<AssigmentAdapter.MyVi
         TextView namaTugas;
         TextView tanggalTugas;
         ImageView fotoTugas;
+        TextView assignRemove;
 
 
         public MyViewHolder(View itemView) {
@@ -73,6 +83,7 @@ public class AssigmentAdapter extends RecyclerView.Adapter<AssigmentAdapter.MyVi
             namaTugas = (TextView) itemView.findViewById(R.id.nameTugas);
             tanggalTugas = (TextView) itemView.findViewById(R.id.dateTugas);
             fotoTugas = (ImageView) itemView.findViewById(R.id.imageTugas);
+            assignRemove = (TextView) itemView.findViewById(R.id.rmvAssign);
         }
     }
 }

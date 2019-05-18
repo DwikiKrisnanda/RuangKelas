@@ -41,10 +41,11 @@
                 android:textStyle="bold"
                 tools:text="Nama" />
             <TextView
+                android:id="@+id/rmvMahasiswa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/delete"
-                android:layout_marginRight="30dp"/>
+                android:layout_marginRight="30dp"
+                android:background="@drawable/delete" />
         </LinearLayout>
 
         <TextView

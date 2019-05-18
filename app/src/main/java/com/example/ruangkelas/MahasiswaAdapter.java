@@ -31,13 +31,22 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         Glide.with(context)
                 .asBitmap()
                 .load(listMahasiswa.get(position).getFotoMahasiswa())
                 .into(holder.imageView);
         holder.name.setText(listMahasiswa.get(position).getNamaMahasiswa());
         holder.nim.setText(listMahasiswa.get(position).getNim());
+
+        holder.mhsRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listMahasiswa.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position,listMahasiswa.size());
+            }
+        });
     }
 
     @Override
@@ -50,6 +59,7 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MyVi
         TextView name;
         TextView nim;
         ImageView imageView;
+        TextView mhsRemove;
 
 
         public MyViewHolder(View itemView) {
@@ -58,6 +68,7 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MyVi
             name = (TextView) itemView.findViewById(R.id.namaMember);
             nim = (TextView) itemView.findViewById(R.id.nimMember);
             imageView = (ImageView) itemView.findViewById(R.id.image_view);
+            mhsRemove = (TextView) itemView.findViewById(R.id.rmvMahasiswa);
         }
     }
 }

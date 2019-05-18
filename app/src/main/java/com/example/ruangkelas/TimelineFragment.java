@@ -20,6 +20,7 @@ public class TimelineFragment extends Fragment {
     RecyclerView recyclerView;
     List<Timeline> listTimeline;
     private TimelineAdapter tlAdapter;
+    EditText editTextNewSndr;
     EditText editTextNewTtlAnn;
     EditText editTextNewAnn;
 
@@ -38,16 +39,18 @@ public class TimelineFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(tlAdapter);
 
+        editTextNewSndr=(EditText) v3.findViewById(R.id.newPengirim);
         editTextNewTtlAnn=(EditText) v3.findViewById(R.id.newTitleAnnounce);
         editTextNewAnn=(EditText) v3.findViewById(R.id.newAnnounce);
-        Button btAdd=(Button) v3.findViewById(R.id.save);
+        Button btAdd=(Button) v3.findViewById(R.id.saveTimeline);
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v3) {
+                String newSndr=editTextNewSndr.getText().toString();
                 String newTtlAnn=editTextNewTtlAnn.getText().toString();
                 String newAnn=editTextNewAnn.getText().toString();
                 // add new item to arraylist
-                listTimeline.add(new Timeline("Anak Agung Ketut Agung Cahyawan Wiranatha, ST, MT","" + newTtlAnn, "" + newAnn,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
+                listTimeline.add(new Timeline("" + newSndr,"" + newTtlAnn, "" + newAnn,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvrRHleqfyChlwZVwlDTvFQOKM1J14WiBJ304R4bnRsYya8p1zA"));
                 // notify listview of data changed
                 tlAdapter.notifyDataSetChanged();
             }

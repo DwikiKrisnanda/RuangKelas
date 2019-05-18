@@ -42,14 +42,16 @@
             android:layout_weight="1"
             android:textColorHint="@color/black"
             android:id="@+id/edittextDosen">
+
             <EditText
+                android:id="@+id/newDosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
-                android:textSize="13sp"
                 android:layout_marginRight="30dp"
-                android:hint="Add Dosen"/>
+                android:hint="Add Dosen"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
         <Button
             android:id="@+id/saveDosen"
@@ -82,34 +84,39 @@
             android:layout_weight="1"
             android:textColorHint="@color/black"
             android:id="@+id/edittextMahasiswa">
+
             <EditText
+                android:id="@+id/newMahasiswa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorPrimary"
-                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:textSize="13sp"
-                android:hint="Add Mahasiswa"/>
+                android:hint="Add Mahasiswa"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="13sp" />
         </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textColorHint="@color/black"
-        android:id="@+id/edittextNIM">
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/colorPrimary"
-            android:textSize="13sp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:hint="Add NIM"/>
-    </android.support.design.widget.TextInputLayout>
+            android:layout_weight="1"
+            android:textColorHint="@color/black"
+            android:id="@+id/edittextNIM">
+
+            <EditText
+                android:id="@+id/newNIM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Add NIM"
+                android:inputType="number"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="13sp" />
+        </android.support.design.widget.TextInputLayout>
         <Button
-            android:id="@+id/save"
+            android:id="@+id/saveMahasiswa"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
